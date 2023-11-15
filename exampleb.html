@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECKER SYSTEM</title>
+
+    <style>
+        body {
+            font-family: 'Raleway', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #db34ba;
+            color: #ffffff;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+<input type="text" id="userInput" placeholder="Enter a number">
+<button onclick="checkInput()">CHECK</button>
+
+<script>
+    function checkInput() {
+        var userInput = document.getElementById("userInput").value;
+
+        if (!isNaN(userInput)) {
+            var number = parseFloat(userInput);
+
+            if (number < 10) {
+                alert("The number is lower than 10");
+            } else {
+                alert("The number is higher than 10");
+            }
+        } else {
+            alert("Please insert a number!");
+        }
+    }
+</script>
+
+</body>
+</html>
